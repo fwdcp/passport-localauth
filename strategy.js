@@ -20,7 +20,7 @@ class LocalAuthStrategy extends Strategy {
                 if (err) {
                     this.error(err);
                 }
-                else if (!isNil(user) || user === false) {
+                else if (isNil(user) || user === false) {
                     this.fail(info);
                 }
                 else {
